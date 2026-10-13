@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# BMI Calculator and other local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables and API keys
+.env.*
+!.env.example
+
+# Virtual environments
+.venv/
+venv/
+
+# VS Code local settings
+.vscode/
