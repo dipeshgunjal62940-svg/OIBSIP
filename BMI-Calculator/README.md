@@ -1,30 +1,23 @@
-# BMI Calculator Using Python
+ # BMI Calculator
 
-A Python-based BMI Calculator featuring a command-line interface (CLI), graphical user interface (GUI), SQLite database, and BMI trend visualization.
-
-## Project Overview
-
-This project calculates Body Mass Index (BMI) using a person's weight and height. It provides both a terminal-based calculator and a desktop GUI built with Tkinter. BMI calculation records can be stored in SQLite and reviewed through a history table and a trend chart.
+A Python-based Body Mass Index (BMI) Calculator that helps users calculate their BMI using their weight and height. The project includes a Command-Line Interface (CLI) and a Graphical User Interface (GUI).
 
 ## Features
 
-* **CLI Calculator:** Calculate BMI from the terminal.
-* **GUI Calculator:** User-friendly desktop application using Tkinter.
-* **Input Validation:** Handles non-numeric, zero, and negative values.
-* **BMI Categories:** Underweight, Normal, Overweight, and Obese.
-* **Category Colors:** Displays results with category-based colors.
-* **SQLite Database:** Saves username, weight, height, BMI, category, and date.
-* **Calculation History:** Displays records for a selected username.
-* **BMI Trend Chart:** Visualizes BMI against date using Matplotlib when at least two records exist.
-* **Error Handling:** Handles invalid input and SQLite database errors.
+- Calculate BMI using weight and height.
+- Display the calculated BMI value.
+- Show a BMI category based on the application's classification logic.
+- Command-Line Interface for text-based interaction.
+- Graphical User Interface built with Tkinter.
+- Input validation and error handling.
+- Save BMI records locally using SQLite, if database functionality is enabled in the application.
 
 ## Technologies Used
 
-* Python 3
-* Tkinter
-* SQLite3
-* Matplotlib
-* Git and GitHub
+- Python
+- Tkinter for the graphical interface
+- SQLite3 for local database storage
+- Python standard library
 
 ## Project Structure
 
@@ -33,89 +26,89 @@ BMI-Calculator/
 ├── bmi_cli.py
 ├── bmi_gui.py
 ├── README.md
-├── requirements.txt
-└── screenshots/
-    ├── bmi_cli.png
-    └── bmi_gui.png
+└── requirements.txt
 ```
 
-The `bmi_records.db` file is created automatically when the GUI application runs. The local database is excluded from Git tracking to help protect personal records.
+The SQLite database file may be created automatically when the application runs.
+
+## Requirements
+
+- Python 3.13 or another compatible Python 3 version.
+- Tkinter for the GUI.
+- SQLite3, included with standard Python installations.
+
+No third-party Python packages are required for the standard implementation.
 
 ## Installation
 
-### 1. Check Python
+1. Download or clone the repository.
+2. Open a terminal in the `BMI-Calculator` directory.
+3. Make sure Python is installed.
 
-Install Python 3 if it is not already installed.
-
-Verify your installation:
+Check your Python installation:
 
 ```bash
 python --version
 ```
 
-### 2. Install the dependency
-
-Open a terminal in the `BMI-Calculator` folder and run:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-Tkinter and SQLite3 are included with most standard Windows Python installations.
-
 ## How to Run
 
-### Command-Line Version
+### CLI Version
+
+Run the following command:
 
 ```bash
 python bmi_cli.py
 ```
 
-Enter your weight in kilograms and height in meters when prompted. Follow the instructions to calculate BMI again or exit.
+Follow the prompts to enter your weight and height.
 
 ### GUI Version
+
+Run the following command:
 
 ```bash
 python bmi_gui.py
 ```
 
-Enter your name, weight, and height, then click **Calculate BMI**.
+Enter the required details in the application window and use the available controls to calculate BMI.
 
-Use **Show History** to review saved records and **Show Trend** to visualize changes in BMI over time. The trend chart requires at least two records.
+## BMI Formula
 
-Height can be entered in meters or centimeters, according to the application's input handling.
+BMI is calculated using the following formula when weight is in kilograms and height is in metres:
 
-## Screenshots
+**BMI = Weight (kg) / Height (m)²**
 
-Screenshots of the CLI and GUI will be added to the `screenshots/` directory.
+For example, if weight is 60 kg and height is 1.70 m:
 
-### CLI Calculator
+BMI = 60 / (1.70 × 1.70) ≈ 20.76
 
-![CLI Calculator](screenshots/bmi_cli.png)
+BMI categories and validation rules depend on the application's implementation.
 
-### GUI Calculator
+## Database
 
-![GUI Calculator](screenshots/bmi_gui.png)
+If database functionality is enabled, the GUI stores BMI records in a local SQLite database. The application can use the database to retain entered details and calculated results.
 
-## Learning Outcomes
+The local database should not be committed if it contains personal information.
 
-Through this project, I practised:
+## Error Handling
 
-* Python functions, loops, and conditional statements
-* Input validation and exception handling
-* Desktop GUI development with Tkinter
-* SQLite database creation and parameterized SQL queries
-* Data visualization with Matplotlib
-* Organizing and documenting a Python project using Git and GitHub
+The application should validate inputs and handle cases such as:
 
-## Disclaimer
+- Empty fields.
+- Non-numeric values.
+- Zero or negative weight.
+- Zero or negative height.
 
-BMI is a screening measure and does not diagnose health conditions. The categories used here are standard adult BMI ranges and may not be appropriate for every individual.
+## Future Improvements
+
+- Add BMI history and record management.
+- Improve the GUI design.
+- Add charts to visualize BMI history.
+- Export records to CSV.
 
 ## Author
 
 **Dipesh Gunjal**
 
-Python Developer | Data Analytics Enthusiast
-
-GitHub: [dipeshgunjal62940-svg](https://github.com/dipeshgunjal62940-svg)
+Python Programming — OIBSIP Internship Project: BMI Calculator
